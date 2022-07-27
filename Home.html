@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Redirect | Home</title>
+        <link rel="stylesheet" href="bootstrap-5.2.0-dist\css\bootstrap.min.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body class="bg-light">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="container container-small pt-1">
+                <h5 class="text-light text-center">Redirection - a lightweight homepage manager</h5>
+            </div>
+        </nav>
+        <header class="container container-small text-center pt-4 pb-3">
+            <H3>How does it work?</H3>
+            <p>Redirection allows you to have a different homepage for every day of the week. Simply 
+            enter the URL of the website you wish to visit for each day below, and set <a href="#temp" class="link-info">
+            this link</a> as your homepage. Leaving a field empty will redirect you to this page on that day, but 
+            we recommend that you also bookmark this page in case you want to change a link.
+
+            We use your browser's local storage to store the links, meaning 
+            we don't track any user data. This also means you can set up a different set of homepages for 
+            each browser that you use. You can view the source code <a href="#temp" class="link-info">here</a>.</p>
+        </header>
+        <hr>
+        <footer class="container-fluid pt-2 pb-3">
+            <div class="container container-small">
+                <h3>Enter your daily links:</h3>
+                <form id="dailyLinksForm" class="mb-3">
+                    <label for="monVal" class="form-label">Monday:</label>
+                    <input type="text" id="monValInput" name="mondayInput" class="form-control text-muted">
+                    <label for="tueVal" class="form-label">Tuesday:</label>
+                    <input type="text" id="tueValInput" name="tuesdayInput" class="form-control text-muted">
+                    <label for="wedVal" class="form-label">Wednesday:</label>
+                    <input type="text" id="wedValInput" name="wednesdayInput" class="form-control text-muted">
+                    <label for="thuVal" class="form-label">Thursday:</label>
+                    <input type="text" id="thuValInput" name="thursdayInput" class="form-control text-muted">
+                    <label for="friVal" class="form-label">Friday:</label>
+                    <input type="text" id="friValInput" name="fridayInput" class="form-control text-muted">
+                    <label for="satVal" class="form-label">Saturday:</label>
+                    <input type="text" id="satValInput" name="saturdayInput" class="form-control text-muted">
+                    <label for="sunVal" class="form-label">Sunday:</label>
+                    <input type="text" id="sunValInput" name="sundayInput" class="form-control text-muted">
+                </form>
+                <script type="text/javascript" src="./Settings.js"></script>
+                <button type="button" onClick="saveValues()" class="btn btn-primary">Save</button>
+            </div>
+        </footer>
+    </body>
+</html> 

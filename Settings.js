@@ -9,7 +9,13 @@ var daysOfTheWeek = {
 }
 
 for (var key in daysOfTheWeek) {
-	daysOfTheWeek[key] = window.localStorage.getItem(key);
+	let link = window.localStorage.getItem(key);
+
+	if (link != null) {
+		daysOfTheWeek[key] = link;
+
+	}
+
 	let inputId = key.substring(0,3) + "ValInput";
 	document.getElementById(inputId).value = daysOfTheWeek[key];
 }
