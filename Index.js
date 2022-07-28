@@ -2,5 +2,15 @@
 var days = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
 var date = new Date();
 
-// Redirect to curren day
-window.location.replace(window.localStorage.getItem(days[date.getDay()]));
+console.log("who");
+
+// Redirect to current day
+let link = window.localStorage.getItem(days[date.getDay()]);
+
+console.log(link);
+
+if (link) {
+	window.location.replace(link);
+} else {
+	window.location.replace("Home.html");
+}
